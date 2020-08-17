@@ -22,15 +22,15 @@
             }
             
             nav {
-                z-index: 5;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 min-height: 10vh;
-                background-color: &white;
+                background-color: white;
                 font-family: $font-family;
                 overflow: hidden;
                 .burger {
+                    z-index: 5;
                     display: none;
                     cursor: pointer;
                     div {
@@ -77,6 +77,7 @@
                     overflow-x: hidden;
                 }
                 nav {
+                    z-index: 5;
                     overflow: hidden;
                     .burger {
                         display: block;
@@ -154,8 +155,8 @@
                 z-index: 3;
             }
             
-            #body {
-                overflow: hidden;
+            body {
+                overflow-x: hidden !important;
             }
             
             #top {
@@ -175,7 +176,7 @@
                             padding-right: 10%;
                             ;
                         }
-                        h4 {
+                        p {
                             font-family: $font-family;
                             font-size: 25px;
                             font-weight: $weight-light;
@@ -199,6 +200,9 @@
             @media screen and (max-width:768px) {
                 #top {
                     .top-row {
+                        margin: 2%;
+                        text-align: center;
+                        flex-flow: column-reverse;
                         height: 100%;
                         .top-col-text {
                             padding: 10% 10% 30% 10%;
@@ -212,15 +216,16 @@
                 top: -15%;
                 right: -20%;
                 width: 80%;
-                z-index: 0;
+                z-index: -1;
             }
             
             @media screen and(max-width:768px) {
                 .back-im {
                     position: absolute;
-                    top: 95%;
-                    left: 0%;
-                    width: 100%;
+                    top: 0;
+                    left: 5%;
+                    width: 150%;
+                    z-index: -1;
                 }
             }
             
@@ -238,7 +243,7 @@
                         font-size: 40px;
                         font-weight: $weight-normal;
                     }
-                    h4 {
+                    p {
                         font-family: $font-family;
                         font-size: 20px;
                         font-weight: $weight-light;
@@ -254,7 +259,7 @@
                                 font-weight: $weight-normal;
                                 padding-top: 5%;
                             }
-                            h5 {
+                            p {
                                 font-family: $font-family;
                                 font-size: 18px;
                                 font-weight: $weight-light;
@@ -268,9 +273,10 @@
             
             @media screen and(max-width:768px) {
                 #features {
+                    text-align: center;
                     .feat-cont {
-                        h4 {
-                            padding: 1% 10% 3% 0;
+                        p {
+                            padding: 1% 9% 3% 1%;
                         }
                     }
                 }
@@ -300,11 +306,12 @@
                                 font-family: $font-family;
                                 font-weight: $weight-normal;
                                 padding: 0 5% 2% 5%;
+                                cursor: pointer;
                                 &:hover {
                                     color: $lime-green;
                                 }
                             }
-                            h5 {
+                            p {
                                 font-family: $font-family;
                                 color: $gray-blue;
                                 font-weight: $weight-light;
@@ -347,15 +354,18 @@
                     .row {
                         .fas-footer {
                             color: $white;
-                            padding: 7% 1%;
+                            font-size: 20px;
+                            margin: 3% 1%;
                             &:hover {
                                 color: $bright-cyan;
                             }
                         }
                     }
                     h5 {
+                        margin: 2% auto;
                         color: $white;
                         font-weight: $weight-light;
+                        cursor: pointer;
                         &:hover {
                             color: $bright-cyan;
                         }
@@ -387,7 +397,7 @@
                     text-align: center;
                     .col-lg-3 {
                         .row {
-                            margin-left: 40%;
+                            justify-content: center;
                         }
                     }
                     .col-btn {
